@@ -2,8 +2,6 @@
 app = "fly-conduit"
 primary_region = "iad"
 
-[build]
-
 [http_service]
   internal_port = 6167
   force_https = true
