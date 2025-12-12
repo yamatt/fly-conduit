@@ -14,7 +14,7 @@ A Matrix server running on Fly.io using [Conduit](https://conduit.rs/) - a light
    ```bash
    flyctl launch
    ```
-   
+
 2. **Create a volume for persistent data:**
    ```bash
    flyctl volumes create conduit_data --size 1
@@ -40,6 +40,22 @@ The server is configured via environment variables. Key settings:
 - `CONDUIT_ADDRESS`: Address to bind to (default: `0.0.0.0`)
 
 See the [Conduit documentation](https://gitlab.com/famedly/conduit/-/blob/next/README.md) for all available configuration options.
+
+### First Setup
+
+At first setup you will need to allow registration, then disable it afterwards.
+
+You can do this by setting:
+
+```sh
+fly secrets set CONDUIT_ALLOW_REGISTRATION=true
+```
+
+Then setting
+
+```sh
+fly secrets set CONDUIT_ALLOW_REGISTRATION=false
+```
 
 ## Continuous Deployment
 
