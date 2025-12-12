@@ -5,9 +5,6 @@ FROM registry.gitlab.com/famedly/conduit/matrix-conduit:v0.10.9
 # Set working directory
 WORKDIR /app
 
-# Create a directory for the database
-RUN mkdir -p /var/lib/matrix-conduit
-
 # Expose the port Conduit uses
 EXPOSE 6167
 
