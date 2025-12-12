@@ -5,13 +5,12 @@ FROM registry.gitlab.com/famedly/conduit/matrix-conduit:v0.10.9
 # Set working directory
 WORKDIR /app
 
+# Copy the configuration file
+COPY conduit.toml /etc/conduit.toml
+
 # Expose the port Conduit uses
 EXPOSE 6167
 
-# Set the database path
-ENV CONDUIT_DATABASE_PATH=/var/lib/matrix-conduit
-ENV CONDUIT_PORT=6167
-ENV CONDUIT_ADDRESS=0.0.0.0
+# Set the config file path
+ENV CONDUIT_CONFIG=/etc/conduit.toml
 
-# Run Conduit
-CMD ["/usr/local/bin/matrix-conduit"]
