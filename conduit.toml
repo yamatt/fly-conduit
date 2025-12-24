@@ -38,3 +38,6 @@ trusted_servers = ["matrix.org"]
 #log = "warn,state_res=warn,rocket=off,_=off,sled=off"
 
 address = "0.0.0.0"
+
+[appservice]
+registration_dir = "/var/lib/matrix-conduit/appservices"
