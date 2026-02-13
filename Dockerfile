@@ -1,6 +1,6 @@
 # Use the official Conduit image from GitLab Container Registry
 # Dependabot monitors for base image updates weekly
-FROM registry.gitlab.com/famedly/conduit/matrix-conduit:v0.10.11
+FROM registry.gitlab.com/famedly/conduit/matrix-conduit:v0.10.12
 
 # Set working directory
 WORKDIR /app
