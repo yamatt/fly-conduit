@@ -8,6 +8,11 @@ on:
       - ".github/workflows/docker-check-and-deploy.yml"
       - Dockerfile
       - fly.toml
+  workflow_run:
+    workflows:
+      - Auto-merge
+    types:
+      - completed
 
 jobs:
   docker-lint:
