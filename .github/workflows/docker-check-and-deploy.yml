@@ -22,7 +22,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
 
       - name: Run Hadolint
         uses: hadolint/hadolint-action@v3.3.0
@@ -39,7 +39,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.3
 
       - name: Setup Fly.io CLI
         uses: superfly/flyctl-actions/setup-flyctl@v1
